@@ -30,6 +30,17 @@ public class Main extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        int[][] coordinates = new int[12][21];
+        
+        Level lvl1 = new Level("Level 1", coordinates);
+        Level lvl2 = new Level("Level 2", coordinates);
+        Level lvl3 = new Level("Level 3", coordinates);
+        Level lvl4 = new Level("Level 4", coordinates);
+        Level lvl5 = new Level("Level 5", coordinates);
+        Level lvl6 = new Level("Level 6", coordinates);
+        Level lvl7 = new Level("Level 7", coordinates);
+        
         launch(args);
     }
     

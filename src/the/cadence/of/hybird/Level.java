@@ -13,12 +13,10 @@ import java.util.ArrayList;
 public class Level {
     private String name;
     private boolean escaped = false;
-    private int[][] exitPortal;
     private int[][] levelCoordinates = new int[12][21];
     
-    public Level(String n, int[][] e, int[][] l){
+    public Level(String n, int[][] l){
         name = n;
-        exitPortal = e;
         levelCoordinates = l;
     }
     
