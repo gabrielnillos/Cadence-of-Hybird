@@ -15,9 +15,8 @@ import java.util.*;
 public class Snakebird implements Moves{
   private String name;
   private int length;
-  private int headX;
-  private int headY;
-  private int[][] snakebirdCoordinates = new int[12][21];
+  private int headXIndex;
+  private int headYIndex;
   private float timing;
   private float timeInterval;
 
@@ -28,12 +27,8 @@ public class Snakebird implements Moves{
     name = n;
     timing = t;
     timeInterval = ti;
-    headX = x;
-    headY = y;
-    snakebirdCoordinates[headY][headX] = 2; //2 = head ; 1 = body
-    for(x = 1; x < length; x++ ){
-        snakebirdCoordinates[headY][headX-x] = 1;
-    }
+    headXIndex = x;
+    headYIndex = y;
   }
   
   
@@ -59,13 +54,10 @@ public class Snakebird implements Moves{
   }
    
     public int getHeadX() {
-        return headX;
+        return headXIndex;
     }
     public int getHeadY() {
-        return headY;
+        return headYIndex;
     }
-    public int[][] getSnakebirdCoordinates() {
-        return snakebirdCoordinates;
-    }
-  
+    
 }

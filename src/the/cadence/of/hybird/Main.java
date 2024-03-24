@@ -31,9 +31,13 @@ public class Main extends Application {
      */
     public static void main(String[] args) {
         
-        int[][] coordinates = new int[12][21];
+        int[][] coordinates = new int[9][16];
         
-        Level lvl1 = new Level("Level 1", coordinates);
+        Snakebird snakebird1 = new Snakebird(3, "Vincent", 1, 1, 5 ,8);
+        
+        Food food1 = new Food(1, "Cherry", 11, 7, "images/cherry.png");
+        
+        Level lvl1 = new Level("Level 1", coordinates, snakebird1, food1);
         Level lvl2 = new Level("Level 2", coordinates);
         Level lvl3 = new Level("Level 3", coordinates);
         Level lvl4 = new Level("Level 4", coordinates);
