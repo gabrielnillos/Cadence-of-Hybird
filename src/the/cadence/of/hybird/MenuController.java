@@ -13,6 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -47,12 +48,45 @@ public class MenuController implements Initializable {
         
     }
     
-    /**
-     * Initializes the controller class.
-     */
+    @FXML public void clickLvlSelect(MouseEvent event) throws IOException {
+        
+        Node component = (Node) event.getSource();
+        Stage stage = (Stage) component.getScene().getWindow();
+        
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("LevelSelectGUI.fxml"));
+        Parent root = loader.load();
+        
+        Scene scene = new Scene(root);
+        stage.hide();
+        stage.setScene(scene);
+        stage.show();
+    }
+    
+    @FXML public void clickSettings(MouseEvent event) throws IOException {
+        
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Error 404: Subject Not Found");
+        alert.setHeaderText("ERROR 404: SUBJECT NOT FOUND");
+        alert.setContentText("The subject you searched for is not in this list");
+        alert.showAndWait();
+        
+    }
+    
+    @FXML public void clickQuit(MouseEvent event) throws IOException {
+        
+        Node component = (Node) event.getSource();
+        Stage stage = (Stage) component.getScene().getWindow();
+      
+        stage.hide();
+
+    }
+    
+    @FXML public void hoverBtnCont(MouseEvent event) {
+        
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
     }    
     
 }

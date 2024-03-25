@@ -19,22 +19,22 @@
          <right>
             <VBox alignment="CENTER" prefHeight="600.0" prefWidth="495.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="btnCont" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#clickContinue" prefHeight="86.0" prefWidth="290.0" style="-fx-background-color: null" text="Continue" textFill="WHITE">
+                  <Button id="buttonCont" fx:id="btnCont" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#clickContinue" prefHeight="86.0" prefWidth="290.0" style="-fx-background-color: null;" text="Continue" textFill="WHITE">
                      <font>
                         <Font name="Berlin Sans FB Bold" size="50.0" />
                      </font>    
                   </Button>
-                  <Button fx:id="btnMap" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: null" text="World Map" textFill="WHITE">
+                  <Button fx:id="btnMap" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#clickLvlSelect" style="-fx-background-color: null" text="World Map" textFill="WHITE">
                      <font>
                         <Font name="Berlin Sans FB Bold" size="50.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnSettings" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: null" text="Settings" textFill="WHITE">
+                  <Button fx:id="btnSettings" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#clickSettings" style="-fx-background-color: null" text="Settings" textFill="WHITE">
                      <font>
                         <Font name="Berlin Sans FB Bold" size="50.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnQuit" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: null" text="Quit" textFill="RED">
+                  <Button fx:id="btnQuit" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#clickQuit" style="-fx-background-color: null" text="Quit" textFill="RED">
                      <font>
                         <Font name="Berlin Sans FB Bold" size="50.0" />
                      </font>

@@ -18,7 +18,7 @@ import javafx.stage.Stage;
  *
  * @author MUON
  */
-public class LevelSelectController implements Initializable {
+public class LevelSelectController2 implements Initializable {
     
     World sk = new World("Snakebird Kingdom", "skIcon", "LevelSelectGUI");
     World ec = new World("Evil Castle", "ecIcon", "LevelSelectGUI2");
@@ -96,6 +96,6 @@ public class LevelSelectController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        currentWorld = sk;
+        currentWorld = ec;
     }    
 }
