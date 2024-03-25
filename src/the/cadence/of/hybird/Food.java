@@ -29,6 +29,14 @@ public class Food {
     public String getFoodName() {
         return foodName;
     }
+    
+    public int getFoodX(){
+        return foodXIndex;
+    }
+    
+    public int getFoodY(){
+        return foodYIndex;
+    }
   
   
 }

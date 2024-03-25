@@ -34,7 +34,7 @@ public class Main extends Application {
         int[][] coordinates = new int[9][16];
         
         Snakebird snakebird1 = new Snakebird(3, "Vincent", 1, 1, 5 ,8);
-        
+         
         Food food1 = new Food(1, "Cherry", 11, 7, "images/cherry.png");
         
         Level lvl1 = new Level("Level 1", coordinates, snakebird1, food1);

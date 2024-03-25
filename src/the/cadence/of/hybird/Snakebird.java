@@ -59,5 +59,7 @@ public class Snakebird implements Moves{
     public int getHeadY() {
         return headYIndex;
     }
-    
+    public int getLength() {
+        return length;
+    }
 }

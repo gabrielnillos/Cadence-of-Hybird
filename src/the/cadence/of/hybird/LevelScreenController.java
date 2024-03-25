@@ -10,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.image.ImageView;
 
+
 /**
  * FXML Controller class
  *
@@ -19,6 +20,10 @@ public class LevelScreenController implements Initializable {
 
     @FXML
     private ImageView backgroundPic;
+    
+    private void generateLevel(Level levelLoad){
+        
+    }
 
     /**
      * Initializes the controller class.

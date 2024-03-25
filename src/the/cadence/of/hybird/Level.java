@@ -27,6 +27,12 @@ public class Level {
     foodList.add(f1);
     this.name = name;
     levelCoordinates = ground;
+    for(int x = 0; x <= sb1.getLength() - 1; x++){
+        if(x==0) levelCoordinates[sb1.getHeadY()][sb1.getHeadX()-x] = 3;
+        else levelCoordinates[sb1.getHeadY()][sb1.getHeadX()-x] = 4;
+    }
+    levelCoordinates[f1.getFoodY()][f1.getFoodX()] = 5;
+    
   }  
   
     public Level(String name, int[][] ground, Snakebird sb1, Food f1, Food f2) {
@@ -36,7 +42,6 @@ public class Level {
     this.name = name;
     levelCoordinates = ground;
   }  
-  
   
     
 }
