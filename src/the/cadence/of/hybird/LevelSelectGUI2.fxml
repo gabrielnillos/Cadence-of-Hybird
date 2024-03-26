@@ -50,7 +50,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <ImageView fx:id="settingsBtn" fitHeight="80.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="settingsBtn" fitHeight="80.0" fitWidth="64.0" onMouseClicked="#clickSettings" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@images/settingsIcon.png" />
                </image>

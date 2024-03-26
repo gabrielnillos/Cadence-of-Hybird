@@ -9,6 +9,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.DialogPane;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -91,6 +93,24 @@ public class LevelSelectController2 implements Initializable {
                 stage.setScene(scene);
                 stage.show();
             }
+        }
+    }
+    
+    @FXML public void clickSettings(MouseEvent event) throws IOException {
+               
+        try{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Popup.fxml"));
+        Parent root = loader.load();
+        
+        Stage stage = new Stage();
+        stage.setTitle("Settings");
+        Scene scene = new Scene(root, 300, 190);
+        stage.setScene(scene);
+        stage.show();
+        
+        }
+        catch (IOException e){
+            e.printStackTrace();
         }
     }
     
