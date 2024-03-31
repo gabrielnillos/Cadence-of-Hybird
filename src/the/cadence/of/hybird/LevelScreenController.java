@@ -9,6 +9,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.GridPane;
 
 
 /**
@@ -20,9 +21,19 @@ public class LevelScreenController implements Initializable {
 
     @FXML
     private ImageView backgroundPic;
+    @FXML private GridPane gridPane;
     
-    private void generateLevel(Level levelLoad){
-        
+    public void generateLevel(Level levelLoad){
+        for(int y = 0; y <= levelLoad.getCoordinates().length -1; y++){
+            for(int x = 0; x <= levelLoad.getCoordinates()[y].length -1; x++){
+                if(levelLoad.getCoordinates()[y][x] == 1){
+                    
+                  ImageView imageView = new ImageView("images/body.png"); 
+                  gridPane.add(imageView, x, y);
+
+                }
+            }
+        }
     }
 
     /**
@@ -30,7 +41,7 @@ public class LevelScreenController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // 
+        //
     }    
     
 }

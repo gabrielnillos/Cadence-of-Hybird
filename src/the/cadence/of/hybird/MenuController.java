@@ -37,8 +37,9 @@ public class MenuController implements Initializable {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("LevelScreen.fxml"));
         Parent root = loader.load();
                 
-        //LevelScreenController controller = loader.getController();
-        //controller.displaySubject(selected);
+        LevelScreenController controller = loader.getController();
+        controller.generateLevel(Level.getCurrentLevel());
+        
         Scene scene = new Scene(root);
         stage.hide();
         stage.setScene(scene);

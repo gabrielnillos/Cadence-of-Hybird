@@ -37,6 +37,8 @@ public class Main extends Application {
          
         Food food1 = new Food(1, "Cherry", 11, 7, "images/cherry.png");
         
+        Level currentLevel = new Level("Placeholder", coordinates, snakebird1, food1);
+        
         Level lvl1 = new Level("Level 1", coordinates, snakebird1, food1);
         Level lvl2 = new Level("Level 2", coordinates);
         Level lvl3 = new Level("Level 3", coordinates);
@@ -44,6 +46,8 @@ public class Main extends Application {
         Level lvl5 = new Level("Level 5", coordinates);
         Level lvl6 = new Level("Level 6", coordinates);
         Level lvl7 = new Level("Level 7", coordinates);
+        
+        
         
         launch(args);
     }

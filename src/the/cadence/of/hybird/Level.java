@@ -16,10 +16,13 @@ public class Level {
     private int[][] levelCoordinates = new int[9][16];
     private ArrayList<Food> foodList = new ArrayList<>();
      private ArrayList<Snakebird> snakebirdList = new ArrayList<>();
+     public static ArrayList<Level> levelList = new ArrayList<>();
+     public static int currentLevel = 1;
     
     public Level(String n, int[][] l){
         name = n;
         levelCoordinates = l;
+        levelList.add(this);
     }
     
   public Level(String name, int[][] ground, Snakebird sb1, Food f1) {
@@ -43,6 +46,13 @@ public class Level {
     levelCoordinates = ground;
   }  
   
+   public int[][] getCoordinates(){
+       return levelCoordinates;
+   }
+   
+   public static Level getCurrentLevel() {
+        return levelList.get(currentLevel - 1);
+    }
     
 }
 
