@@ -15,6 +15,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -26,10 +27,9 @@ import javafx.stage.Stage;
  */
 public class MenuController implements Initializable {
 
-    @FXML private ImageView backgroundImg;
-    @FXML private Button btnCont, btnMap, btnSettings, btnQuit;
+    @FXML private TextField usernameTF;
     
-    @FXML public void clickContinue(MouseEvent event) throws IOException {
+    public void clickContinue(MouseEvent event) throws IOException {
         
         Node component = (Node) event.getSource();
         Stage stage = (Stage) component.getScene().getWindow();
@@ -49,7 +49,7 @@ public class MenuController implements Initializable {
         
     }
     
-    @FXML public void clickLvlSelect(MouseEvent event) throws IOException {
+    public void clickLvlSelect(MouseEvent event) throws IOException {
         
         Node component = (Node) event.getSource();
         Stage stage = (Stage) component.getScene().getWindow();
@@ -63,17 +63,24 @@ public class MenuController implements Initializable {
         stage.show();
     }
     
-    @FXML public void clickSettings(MouseEvent event) throws IOException {
+    @FXML public void clickSettings(MouseEvent event) throws IOException {        
+        try{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Popup.fxml"));
+        Parent root = loader.load();
         
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Error 404: Subject Not Found");
-        alert.setHeaderText("ERROR 404: SUBJECT NOT FOUND");
-        alert.setContentText("The subject you searched for is not in this list");
-        alert.showAndWait();
+        Stage stage = new Stage();
+        stage.setTitle("Settings");
+        Scene scene = new Scene(root, 300, 190);
+        stage.setScene(scene);
+        stage.show();
         
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
     }
     
-    @FXML public void clickQuit(MouseEvent event) throws IOException {
+    public void clickQuit(MouseEvent event) throws IOException {
         
         Node component = (Node) event.getSource();
         Stage stage = (Stage) component.getScene().getWindow();
@@ -82,7 +89,7 @@ public class MenuController implements Initializable {
 
     }
     
-    @FXML public void hoverBtnCont(MouseEvent event) {
+    public void hoverBtnCont(MouseEvent event) {
         
     }
 
