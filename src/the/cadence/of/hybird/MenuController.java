@@ -18,6 +18,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 /**
@@ -29,14 +30,17 @@ public class MenuController implements Initializable {
 
     @FXML private TextField usernameTF;
     
+    
+    
     public void clickContinue(MouseEvent event) throws IOException {
+           
         
         Node component = (Node) event.getSource();
         Stage stage = (Stage) component.getScene().getWindow();
         
         FXMLLoader loader = new FXMLLoader(getClass().getResource("LevelScreen.fxml"));
         Parent root = loader.load();
-                
+        
         LevelScreenController controller = loader.getController();
         controller.generateLevel(Level.getCurrentLevel());
         
@@ -44,8 +48,6 @@ public class MenuController implements Initializable {
         stage.hide();
         stage.setScene(scene);
         stage.show();
-
-        
         
     }
     

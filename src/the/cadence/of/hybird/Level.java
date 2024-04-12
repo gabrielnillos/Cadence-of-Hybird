@@ -5,6 +5,7 @@
 package the.cadence.of.hybird;
 
 import java.util.ArrayList;
+import javafx.scene.image.Image;
 
 /**
  *
@@ -53,6 +54,6 @@ public class Level {
    public static Level getCurrentLevel() {
         return levelList.get(currentLevel - 1);
     }
-    
+   
 }
 
