@@ -11,13 +11,13 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<Pane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="the.cadence.of.hybird.LevelSelectController2">
+<Pane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="thecadenceofhybird.LevelSelectController">
    <children>
-      <ImageView fitHeight="727.0" fitWidth="1291.0" layoutX="-11.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/levelSelectBg2.png" />
+            <Image url="@images/levelSelectBg.png" />
          </image></ImageView>
-      <GridPane layoutX="1.0" layoutY="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="716.0" prefWidth="1275.0">
+      <GridPane layoutY="2.6666667461395264" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0">
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -50,16 +50,16 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <ImageView fx:id="settingsBtn" fitHeight="80.0" fitWidth="64.0" onMouseClicked="#clickSettings" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="settingsBtn" fitHeight="77.0" fitWidth="79.0" onMouseClicked="#clickSettings" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@images/settingsIcon.png" />
                </image>
             </ImageView>
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="2">
                <children>
                   <StackPane prefHeight="72.0" prefWidth="75.0">
                      <children>
-                        <ImageView fx:id="l12" fitHeight="55.0" fitWidth="55.0" onMouseClicked="#enterLevel" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="l1" fitHeight="55.0" fitWidth="55.0" onMouseClicked="#enterLevel" pickOnBounds="true" preserveRatio="true">
                            <StackPane.margin>
                               <Insets top="10.0" />
                            </StackPane.margin>
@@ -79,11 +79,11 @@
                   </StackPane>
                </children>
             </Pane>
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="10" GridPane.rowIndex="5">
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="11" GridPane.rowIndex="4">
                <children>
                   <StackPane prefHeight="72.0" prefWidth="75.0">
                      <children>
-                        <ImageView fx:id="l9" fitHeight="55.0" fitWidth="55.0" onMouseClicked="#enterLevel" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="l6" fitHeight="55.0" fitWidth="55.0" onMouseClicked="#enterLevel" pickOnBounds="true" preserveRatio="true">
                            <StackPane.margin>
                               <Insets top="10.0" />
                            </StackPane.margin>
@@ -103,11 +103,11 @@
                   </StackPane>
                </children>
             </Pane>
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="7">
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="5">
                <children>
                   <StackPane prefHeight="72.0" prefWidth="75.0">
                      <children>
-                        <ImageView fx:id="l11" fitHeight="55.0" fitWidth="55.0" onMouseClicked="#enterLevel" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="l2" fitHeight="55.0" fitWidth="55.0" onMouseClicked="#enterLevel" pickOnBounds="true" preserveRatio="true">
                            <StackPane.margin>
                               <Insets top="10.0" />
                            </StackPane.margin>
@@ -127,11 +127,11 @@
                   </StackPane>
                </children>
             </Pane>
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="13" GridPane.rowIndex="7">
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="8">
                <children>
                   <StackPane prefHeight="72.0" prefWidth="75.0">
                      <children>
-                        <ImageView fx:id="l8" fitHeight="55.0" fitWidth="55.0" onMouseClicked="#enterLevel" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="l7" fitHeight="55.0" fitWidth="55.0" onMouseClicked="#enterLevel" pickOnBounds="true" preserveRatio="true">
                            <StackPane.margin>
                               <Insets top="10.0" />
                            </StackPane.margin>
@@ -151,11 +151,59 @@
                   </StackPane>
                </children>
             </Pane>
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="6">
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="14" GridPane.rowIndex="7">
                <children>
                   <StackPane prefHeight="72.0" prefWidth="75.0">
                      <children>
-                        <ImageView fx:id="l10" fitHeight="55.0" fitWidth="55.0" onMouseClicked="#enterLevel" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="l5" fitHeight="55.0" fitWidth="55.0" onMouseClicked="#enterLevel" pickOnBounds="true" preserveRatio="true">
+                           <StackPane.margin>
+                              <Insets top="10.0" />
+                           </StackPane.margin>
+                           <image>
+                              <Image url="@images/levelIcon.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <StackPane.margin>
+                              <Insets bottom="10.0" />
+                           </StackPane.margin>
+                           <image>
+                              <Image url="@images/levelComplete.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </StackPane>
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="7">
+               <children>
+                  <StackPane prefHeight="72.0" prefWidth="75.0">
+                     <children>
+                        <ImageView fx:id="l3" fitHeight="55.0" fitWidth="55.0" onMouseClicked="#enterLevel" pickOnBounds="true" preserveRatio="true">
+                           <StackPane.margin>
+                              <Insets top="10.0" />
+                           </StackPane.margin>
+                           <image>
+                              <Image url="@images/levelIcon.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <StackPane.margin>
+                              <Insets bottom="10.0" />
+                           </StackPane.margin>
+                           <image>
+                              <Image url="@images/levelComplete.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </StackPane>
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="11" GridPane.rowIndex="8">
+               <children>
+                  <StackPane prefHeight="72.0" prefWidth="75.0">
+                     <children>
+                        <ImageView fx:id="l4" fitHeight="55.0" fitWidth="55.0" onMouseClicked="#enterLevel" pickOnBounds="true" preserveRatio="true">
                            <StackPane.margin>
                               <Insets top="10.0" />
                            </StackPane.margin>
@@ -177,30 +225,30 @@
             </Pane>
             <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="16" GridPane.rowIndex="4">
                <children>
-                  <ImageView fx:id="skBtn" fitHeight="72.0" fitWidth="75.0" onMouseClicked="#changeWorld" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="skBtn" fitHeight="73.0" fitWidth="76.0" onMouseClicked="#changeWorld" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@images/skIconDisabled.png" />
+                        <Image url="@images/skIconEnabled.png" />
                      </image>
                   </ImageView>
                </children>
             </Pane>
             <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="16" GridPane.rowIndex="5">
                <children>
-                  <ImageView fx:id="ecBtn" fitHeight="72.0" fitWidth="75.0" onMouseClicked="#changeWorld" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="ecBtn" fitHeight="72.0" fitWidth="76.0" onMouseClicked="#changeWorld" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@images/ecIconEnabled.png" />
+                        <Image url="@images/ecIconDisabled.png" />
                      </image>
                   </ImageView>
                </children>
             </Pane>
          </children>
       </GridPane>
-      <ImageView fitHeight="200.0" fitWidth="188.0" layoutX="1023.0" pickOnBounds="true">
+      <ImageView fitHeight="200.0" fitWidth="207.0" layoutX="129.0" pickOnBounds="true">
          <image>
             <Image url="@images/worldName.png" />
          </image>
       </ImageView>
-      <Label fx:id="worldName" alignment="CENTER" layoutX="1022.0" layoutY="88.0" prefHeight="112.0" prefWidth="180.0" text="Snakebird Kingdom" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+      <Label fx:id="worldName" alignment="CENTER" layoutX="129.0" layoutY="88.0" prefHeight="112.0" prefWidth="199.0" text="Snakebird Kingdom" textAlignment="CENTER" textFill="WHITE" wrapText="true">
          <font>
             <Font name="French Script MT" size="39.0" />
          </font></Label>

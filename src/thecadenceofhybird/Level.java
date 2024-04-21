@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package the.cadence.of.hybird;
+package thecadenceofhybird;
 
 import java.util.ArrayList;
 import javafx.scene.image.Image;
@@ -35,7 +35,7 @@ public class Level {
         if(x==0) levelCoordinates[sb1.getHeadY()][sb1.getHeadX()-x] = 3;
         else levelCoordinates[sb1.getHeadY()][sb1.getHeadX()-x] = 4;
     }
-    levelCoordinates[f1.getFoodY()][f1.getFoodX()] = 5;
+    levelCoordinates[f1.getFoodY()][f1.getFoodX()] = 51;
     
   }  
   
@@ -45,6 +45,28 @@ public class Level {
     foodList.add(f2);
     this.name = name;
     levelCoordinates = ground;
+    for(int x = 0; x <= sb1.getLength() - 1; x++){
+        if(x==0) levelCoordinates[sb1.getHeadY()][sb1.getHeadX()-x] = 3;
+        else levelCoordinates[sb1.getHeadY()][sb1.getHeadX()-x] = 4;
+    }
+    levelCoordinates[f1.getFoodY()][f1.getFoodX()] = 51;
+    levelCoordinates[f2.getFoodY()][f2.getFoodX()] = 52;
+  }  
+    
+    public Level(String name, int[][] ground, Snakebird sb1, Food f1, Food f2, Food f3) {
+    snakebirdList.add(sb1);
+    foodList.add(f1);
+    foodList.add(f2);
+    foodList.add(f3);
+    this.name = name;
+    levelCoordinates = ground;
+    for(int x = 0; x <= sb1.getLength() - 1; x++){
+        if(x==0) levelCoordinates[sb1.getHeadY()][sb1.getHeadX()-x] = 3;
+        else levelCoordinates[sb1.getHeadY()][sb1.getHeadX()-x] = 4;
+    }
+    levelCoordinates[f1.getFoodY()][f1.getFoodX()] = 51;
+    levelCoordinates[f2.getFoodY()][f2.getFoodX()] = 52;
+    levelCoordinates[f3.getFoodY()][f3.getFoodX()] = 53;
   }  
   
    public int[][] getCoordinates(){
@@ -54,6 +76,12 @@ public class Level {
    public static Level getCurrentLevel() {
         return levelList.get(currentLevel - 1);
     }
+   
+   public ArrayList<Food> getFoodList(){
+       return foodList;
+   }
+   
+   
    
 }
 

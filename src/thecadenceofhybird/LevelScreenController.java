@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
-package the.cadence.of.hybird;
+package thecadenceofhybird;
 
 import java.io.File;
 import java.net.URL;
@@ -51,7 +51,7 @@ public class LevelScreenController implements Initializable {
                     setImageAtIndex(levelGrid, x, y, "body.png");
 
                 }
-                if(levelLoad.getCoordinates()[y][x] == 5){
+                if(levelLoad.getCoordinates()[y][x] == 51){
                     setImageAtIndex(levelGrid, x, y, "cherry.png");
 
                 }
@@ -73,7 +73,7 @@ public class LevelScreenController implements Initializable {
             // Load image from file
             try {
                 // Load image from file
-                Image image = new Image(getClass().getResource("/the/cadence/of/hybird/images/" + fileName).toExternalForm());
+                Image image = new Image(getClass().getResource("/thecadenceofhybird/images/" + fileName).toExternalForm());
                 ((ImageView) node).setImage(image); // Set image to ImageView
             } catch (Exception e) {
                 System.err.println("Error loading image: " + e.getMessage());

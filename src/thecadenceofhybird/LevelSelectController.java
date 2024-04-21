@@ -1,4 +1,4 @@
-package the.cadence.of.hybird;
+package thecadenceofhybird;
 
 import java.io.IOException;
 import java.net.URL;
