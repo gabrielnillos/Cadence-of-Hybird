@@ -39,7 +39,6 @@ public class PauseScreenController implements Initializable {
         stage.hide();
         stage.setScene(scene);
         stage.show();
-        
         }
         
 @FXML public void goSettings(MouseEvent event) throws IOException {        

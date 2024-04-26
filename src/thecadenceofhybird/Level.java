@@ -19,6 +19,7 @@ public class Level {
      private ArrayList<Snakebird> snakebirdList = new ArrayList<>();
      public static ArrayList<Level> levelList = new ArrayList<>();
      public static int currentLevel = 1;
+     public Snakebird snakebirdInControl;
     
     public Level(String n, int[][] l){
         name = n;
@@ -48,7 +49,7 @@ public class Level {
         }
       
     levelCoordinates[f1.getFoodY()][f1.getFoodX()] = 51;
-    
+    snakebirdInControl = snakebirdList.get(0);
   }  
   
     public Level(String name, int[][] ground, Snakebird sb1, Food f1, Food f2) {
@@ -74,6 +75,7 @@ public class Level {
         }
     levelCoordinates[f1.getFoodY()][f1.getFoodX()] = 51;
     levelCoordinates[f2.getFoodY()][f2.getFoodX()] = 52;
+    snakebirdInControl = snakebirdList.get(0);
   }  
     
     public Level(String name, int[][] ground, Snakebird sb1, Food f1, Food f2, Food f3) {
@@ -101,6 +103,7 @@ public class Level {
     levelCoordinates[f1.getFoodY()][f1.getFoodX()] = 51;
     levelCoordinates[f2.getFoodY()][f2.getFoodX()] = 52;
     levelCoordinates[f3.getFoodY()][f3.getFoodX()] = 53;
+    snakebirdInControl = snakebirdList.get(0);
   }  
   
    public int[][] getCoordinates(){

@@ -104,6 +104,22 @@ public class LevelScreenController implements Initializable {
             e.printStackTrace();
         }
     }
+    
+    public void goUp(){
+        System.out.println("up");
+    }
+    
+    public void goDown(){
+        System.out.println("down");        
+    }
+    
+    public void goLeft(){
+        System.out.println("left");        
+    }
+    
+    public void goRight(){
+        System.out.println("right");        
+    }
 
     /**
      * Initializes the controller class.

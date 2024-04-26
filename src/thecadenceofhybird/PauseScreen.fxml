@@ -33,7 +33,7 @@
                   <Font name="Berlin Sans FB Bold" size="30.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" mnemonicParsing="false" onAction="#goResume" onMouseClicked="#goResume" prefHeight="55.0" prefWidth="250.0" style="-fx-background-color: null;" text="Resume" textFill="#4e5294">
+            <Button alignment="CENTER" mnemonicParsing="false" onMouseClicked="#goResume" prefHeight="55.0" prefWidth="250.0" style="-fx-background-color: null;" text="Resume" textFill="#4e5294">
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>
