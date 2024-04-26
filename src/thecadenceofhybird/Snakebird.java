@@ -19,6 +19,7 @@ public class Snakebird implements Moves{
   private int headYIndex;
   private float timing;
   private float timeInterval;
+  private int[][] snakebirdCoords = new int[9][16];
 
   Scanner sc = new Scanner(System.in);
 
@@ -29,6 +30,9 @@ public class Snakebird implements Moves{
     timeInterval = ti;
     headXIndex = x;
     headYIndex = y;
+    for (int i = 0; i <= length-1; i++){
+        snakebirdCoords[headYIndex][headXIndex-i] = 1+i;
+    }
   }
   
   
@@ -57,6 +61,7 @@ public class Snakebird implements Moves{
                         if(level.getCoordinates()[headY][headX-1] == 53){
                             eat(level.getFoodList().get(2));
                         }
+                        
                     }
                     
                     
@@ -83,7 +88,10 @@ public class Snakebird implements Moves{
   public void eat(Food food){
       this.length += food.getLengthIncrease();
   }
-   
+   public int[][] getSnakebirdCoords(){
+       return snakebirdCoords;
+   }
+           
     public int getHeadX() {
         return headXIndex;
     }

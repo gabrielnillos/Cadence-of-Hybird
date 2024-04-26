@@ -5,14 +5,25 @@
 package thecadenceofhybird;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.beans.InvalidationListener;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
 
 
 /**
@@ -25,15 +36,7 @@ public class LevelScreenController implements Initializable {
     @FXML private ImageView backgroundPic;
     @FXML private GridPane levelGrid;
     
-        
-   
-    /*
     
-    Image sbHead = new Image("images/head.png");
-    Image lvlGround = new Image("images/ground.jpg");
-    Image foodCherry = new Image("images/cherry.png"); 
-    Image lvlPortal = new Image("images/portal.png");
-    */
     
     public void generateLevel(Level levelLoad){
         //Image sbBody = new Image("/body.png"); 
@@ -83,6 +86,24 @@ public class LevelScreenController implements Initializable {
         }
     }
 }
+    
+    
+    public void pauseOpen() {
+        try{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("PauseScreen.fxml"));
+        Parent root = loader.load();
+        
+        Stage stage = new Stage();
+        stage.setTitle("Paused");
+        Scene scene = new Scene(root, 241, 407);
+        stage.setScene(scene);
+        stage.show();
+        
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+    }
 
     /**
      * Initializes the controller class.
@@ -91,7 +112,6 @@ public class LevelScreenController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        //
-    }    
     
+}
 }

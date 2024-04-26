@@ -31,10 +31,22 @@ public class Level {
     foodList.add(f1);
     this.name = name;
     levelCoordinates = ground;
-    for(int x = 0; x <= sb1.getLength() - 1; x++){
+    /*for(int x = 0; x <= sb1.getLength() - 1; x++){
         if(x==0) levelCoordinates[sb1.getHeadY()][sb1.getHeadX()-x] = 3;
         else levelCoordinates[sb1.getHeadY()][sb1.getHeadX()-x] = 4;
-    }
+    }*/
+    
+    for(int y = 0; y <= sb1.getSnakebirdCoords().length -1; y++){
+            for(int x = 0; x <= sb1.getSnakebirdCoords()[y].length -1; x++){
+                if(sb1.getSnakebirdCoords()[y][x] == 1){
+                    levelCoordinates[y][x] = 3;
+                }
+                else if (sb1.getSnakebirdCoords()[y][x] > 1){
+                    levelCoordinates[y][x] = 4;
+                }
+            }
+        }
+      
     levelCoordinates[f1.getFoodY()][f1.getFoodX()] = 51;
     
   }  
@@ -45,10 +57,21 @@ public class Level {
     foodList.add(f2);
     this.name = name;
     levelCoordinates = ground;
-    for(int x = 0; x <= sb1.getLength() - 1; x++){
+    /*for(int x = 0; x <= sb1.getLength() - 1; x++){
         if(x==0) levelCoordinates[sb1.getHeadY()][sb1.getHeadX()-x] = 3;
         else levelCoordinates[sb1.getHeadY()][sb1.getHeadX()-x] = 4;
-    }
+    }*/
+    
+    for(int y = 0; y <= sb1.getSnakebirdCoords().length -1; y++){
+            for(int x = 0; x <= sb1.getSnakebirdCoords()[y].length -1; x++){
+                if(sb1.getSnakebirdCoords()[y][x] == 1){
+                    levelCoordinates[y][x] = 3;
+                }
+                else if (sb1.getSnakebirdCoords()[y][x] > 1){
+                    levelCoordinates[y][x] = 4;
+                }
+            }
+        }
     levelCoordinates[f1.getFoodY()][f1.getFoodX()] = 51;
     levelCoordinates[f2.getFoodY()][f2.getFoodX()] = 52;
   }  
@@ -60,10 +83,21 @@ public class Level {
     foodList.add(f3);
     this.name = name;
     levelCoordinates = ground;
-    for(int x = 0; x <= sb1.getLength() - 1; x++){
+    /*for(int x = 0; x <= sb1.getLength() - 1; x++){
         if(x==0) levelCoordinates[sb1.getHeadY()][sb1.getHeadX()-x] = 3;
         else levelCoordinates[sb1.getHeadY()][sb1.getHeadX()-x] = 4;
-    }
+    }*/
+    
+    for(int y = 0; y <= sb1.getSnakebirdCoords().length -1; y++){
+            for(int x = 0; x <= sb1.getSnakebirdCoords()[y].length -1; x++){
+                if(sb1.getSnakebirdCoords()[y][x] == 1){
+                    levelCoordinates[y][x] = 3;
+                }
+                else if (sb1.getSnakebirdCoords()[y][x] > 1){
+                    levelCoordinates[y][x] = 4;
+                }
+            }
+        }
     levelCoordinates[f1.getFoodY()][f1.getFoodX()] = 51;
     levelCoordinates[f2.getFoodY()][f2.getFoodX()] = 52;
     levelCoordinates[f3.getFoodY()][f3.getFoodX()] = 53;

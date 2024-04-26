@@ -37,6 +37,7 @@ public class Main extends Application {
         Snakebird snakebird1 = new Snakebird(3, "Vincent", 1, 1, 5 ,7);
          
         Food food1 = new Food(1, "Cherry", 11, 6, "images/cherry.png");
+        Food food2 = new Food(2, "Apple", 8, 5, "images/cherry.png");
         
         coordinates[4][3] = 1;
         coordinates[4][4] = 1;

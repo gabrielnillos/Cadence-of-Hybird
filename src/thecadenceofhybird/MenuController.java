@@ -7,6 +7,7 @@ package thecadenceofhybird;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -17,6 +18,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
@@ -45,6 +48,42 @@ public class MenuController implements Initializable {
         controller.generateLevel(Level.getCurrentLevel());
         
         Scene scene = new Scene(root);
+        
+        
+        /*scene.setOnKeyPressed(e -> {
+            if (e.getCode() == KeyCode.A) {
+                System.out.println("The 'A' key was pressed");
+            }
+         });*/
+        
+        scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
+        
+            @Override
+            public void handle(KeyEvent event){
+                System.out.println(event.getCode());
+                switch(event.getCode()){
+                    case ESCAPE:
+                        controller.pauseOpen();
+                        break;
+                    case UP: 
+                        
+                        break;
+                    case DOWN: 
+                        
+                        break;
+                    case LEFT: 
+                        
+                        break;
+                    case RIGHT: 
+                        
+                        break;
+                }
+            }
+            
+                });
+    
+        
+        
         stage.hide();
         stage.setScene(scene);
         stage.show();
@@ -60,6 +99,7 @@ public class MenuController implements Initializable {
         Parent root = loader.load();
         
         Scene scene = new Scene(root);
+        
         stage.hide();
         stage.setScene(scene);
         stage.show();
@@ -72,7 +112,7 @@ public class MenuController implements Initializable {
         
         Stage stage = new Stage();
         stage.setTitle("Settings");
-        Scene scene = new Scene(root, 300, 190);
+        Scene scene = new Scene(root, 247, 182);
         stage.setScene(scene);
         stage.show();
         
