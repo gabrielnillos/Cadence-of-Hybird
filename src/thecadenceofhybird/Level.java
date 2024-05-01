@@ -16,20 +16,24 @@ public class Level {
     private boolean escaped = false;
     private int[][] levelCoordinates = new int[9][16];
     private ArrayList<Food> foodList = new ArrayList<>();
-     private ArrayList<Snakebird> snakebirdList = new ArrayList<>();
-     public static ArrayList<Level> levelList = new ArrayList<>();
-     public static int currentLevel = 1;
-     public Snakebird snakebirdInControl;
+    private ArrayList<Snakebird> snakebirdList = new ArrayList<>();
+    public static ArrayList<Level> levelList = new ArrayList<>();
+    public static int currentLevel = 1;
+    public Snakebird snakebirdInControl;
     
     public Level(String n, int[][] l){
         name = n;
+        escaped = false;
         levelCoordinates = l;
         levelList.add(this);
     }
     
   public Level(String name, int[][] ground, Snakebird sb1, Food f1) {
+    escaped = false;
     snakebirdList.add(sb1);
     foodList.add(f1);
+    levelList.add(this);
+
     this.name = name;
     levelCoordinates = ground;
     /*for(int x = 0; x <= sb1.getLength() - 1; x++){
@@ -118,7 +122,28 @@ public class Level {
        return foodList;
    }
    
-   
+   public String getName(){
+        return name;
+    }
+    public boolean getEscaped(){
+        return escaped;
+    }
+    public static ArrayList<Level> getLevelList(){
+        return levelList;
+    }
+    public static int getListLength() {
+        return levelList.size();
+    }
+    public static Level getLevelByIndex(int index) throws ArrayIndexOutOfBoundsException{
+        if (index < 0 || index >= Level.getListLength()) {
+            throw new ArrayIndexOutOfBoundsException("Index out of bounds: " + index);
+        }
+        return levelList.get(index);
+    }
+    
+    public void setEscaped(boolean e){
+        escaped = e;
+    }
    
 }
 

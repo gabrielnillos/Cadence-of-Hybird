@@ -4,6 +4,7 @@
  */
 package thecadenceofhybird;
 
+import java.util.ArrayList;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -70,8 +71,21 @@ public class Main extends Application {
         Level lvl5 = new Level("Level 5", coordinates);
         Level lvl6 = new Level("Level 6", coordinates);
         Level lvl7 = new Level("Level 7", coordinates);
+        Level lvl8 = new Level("level8",coordinates);
+        Level lvl9 = new Level("level9",coordinates);
+        Level lvl10 = new Level("level10",coordinates);
+        Level lvl11 = new Level("level11",coordinates);
+        Level lvl12 = new Level("level12",coordinates);
         
-        
+        // Accessing the levelList
+        ArrayList<Level> levels = Level.getLevelList();
+
+        // Debugging: Access each level using .get() and print its name
+        System.out.println("Accessing levels using .get():");
+        for (int i = 0; i < levels.size(); i++) {
+            Level level = levels.get(i);
+            System.out.println("Level at index " + i + ": " + level.getName());
+        }
         
         
         launch(args);

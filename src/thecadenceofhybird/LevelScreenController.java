@@ -22,6 +22,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
@@ -32,7 +33,7 @@ import javafx.stage.Stage;
  * @author Gabriel Nillos
  */
 public class LevelScreenController implements Initializable {
-
+    private static Level level;
     @FXML private ImageView backgroundPic;
     @FXML private GridPane levelGrid;
     
@@ -98,12 +99,44 @@ public class LevelScreenController implements Initializable {
         Scene scene = new Scene(root, 241, 407);
         stage.setScene(scene);
         stage.show();
-        
+       
         }
         catch (IOException e){
             e.printStackTrace();
         }
     }
+    @FXML
+    private void winLevel(MouseEvent event) throws IOException {
+        // win game
+        level.setEscaped(true);
+        try{
+            System.out.println("-------------------");
+            System.out.println("Snakebird has beaten " + level.getName() + "!");
+            System.out.println("-------------------");
+            Node component = (Node) event.getSource();
+            Stage stage = (Stage) component.getScene().getWindow();
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("LevelSelectGUI.fxml"));
+            Parent root = loader.load();
+
+            LevelSelectController controller = loader.getController();
+            controller.setLevelIcons(); 
+            Scene scene = new Scene(root);
+
+            stage.hide();
+            stage.setScene(scene);
+            stage.show();
+        }
+        catch(IOException e){
+
+        }
+    } 
+        
+    void setLevel(int index){
+        // set level to be generated when entering a level
+        level = Level.getLevelByIndex(index);    
+    }
+    
     
     public void goUp(){
         System.out.println("up");
@@ -120,7 +153,7 @@ public class LevelScreenController implements Initializable {
     public void goRight(){
         System.out.println("right");        
     }
-
+    
     /**
      * Initializes the controller class.
      * @param url

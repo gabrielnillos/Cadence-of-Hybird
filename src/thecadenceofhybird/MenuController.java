@@ -60,6 +60,7 @@ public class MenuController implements Initializable {
         
             @Override
             public void handle(KeyEvent event){
+                System.out.println(event.getCode());
                 switch(event.getCode()){
                     case ESCAPE:
                         controller.pauseOpen();
@@ -92,7 +93,7 @@ public class MenuController implements Initializable {
     public void clickLvlSelect(MouseEvent event) throws IOException {
         
         Node component = (Node) event.getSource();
-        Stage stageLvl = (Stage) component.getScene().getWindow();
+         Stage stageLvl = (Stage) component.getScene().getWindow();
         
         FXMLLoader loader = new FXMLLoader(getClass().getResource("LevelSelectGUI.fxml"));
         Parent root = loader.load();
