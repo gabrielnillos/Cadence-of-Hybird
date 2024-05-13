@@ -9,8 +9,8 @@ package thecadenceofhybird;
  * @author Gabriel Nillos
  */
 public interface Moves {
-    boolean moveLeft(Level level);
-    void moveRight();
-    void moveUp();
-    void moveDown();
+    void moveLeft(Level level);
+    void moveRight(Level level);
+    void moveUp(Level level);
+    void moveDown(Level level);
 }

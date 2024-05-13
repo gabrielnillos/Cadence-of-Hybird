@@ -37,12 +37,19 @@ public class LevelScreenController implements Initializable {
     @FXML private ImageView backgroundPic;
     @FXML private GridPane levelGrid;
     
-    
+    public int controlledSnakebirdIndex = 0;
+    private Snakebird snakebirdInControl;
+    public boolean moveStatus;
     
     public void generateLevel(Level levelLoad){
         //Image sbBody = new Image("/body.png"); 
         for(int y = 0; y <= levelLoad.getCoordinates().length -1; y++){
             for(int x = 0; x <= levelLoad.getCoordinates()[y].length -1; x++){
+                
+                if(levelLoad.getCoordinates()[y][x] == 0){
+                    setImageAtIndex(levelGrid, x, y, "empty.png");
+
+                }
                 if(levelLoad.getCoordinates()[y][x] == 1){
                     setImageAtIndex(levelGrid, x, y, "ground.jpg");
 
@@ -139,19 +146,32 @@ public class LevelScreenController implements Initializable {
     
     
     public void goUp(){
-        System.out.println("up");
+        System.out.println("up");       
+        snakebirdInControl = Level.getCurrentLevel().getSnakebirdList().get(controlledSnakebirdIndex);
+        snakebirdInControl.moveUp(Level.getCurrentLevel());
+        generateLevel(Level.getCurrentLevel());
     }
     
     public void goDown(){
-        System.out.println("down");        
+        System.out.println("down");       
+        snakebirdInControl = Level.getCurrentLevel().getSnakebirdList().get(controlledSnakebirdIndex);
+        snakebirdInControl.moveDown(Level.getCurrentLevel());
+        generateLevel(Level.getCurrentLevel());
     }
     
     public void goLeft(){
-        System.out.println("left");        
+        System.out.println("left");          
+        snakebirdInControl = Level.getCurrentLevel().getSnakebirdList().get(controlledSnakebirdIndex);
+        snakebirdInControl.moveLeft(Level.getCurrentLevel());
+        generateLevel(Level.getCurrentLevel());
+        
     }
     
     public void goRight(){
-        System.out.println("right");        
+        System.out.println("right");       
+        snakebirdInControl = Level.getCurrentLevel().getSnakebirdList().get(controlledSnakebirdIndex);
+        snakebirdInControl.moveRight(Level.getCurrentLevel());
+        generateLevel(Level.getCurrentLevel());
     }
     
     /**
